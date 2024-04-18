@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fecha y Hora Actualizada</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Fecha y Hora Actualizada</h1>
+    <p id="fecha-hora"></p>
+
+    <script>
+        function actualizarFechaHora() {
+            var fechaHora = new Date();
+            var opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
+            var formatoFechaHora = fechaHora.toLocaleDateString('es-ES', opciones);
+            document.getElementById('fecha-hora').textContent = formatoFechaHora;
+        }
+
+        // Actualizar la fecha y hora cada segundo
+        setInterval(actualizarFechaHora, 1000);
+
+        // Llamar a la función una vez al cargar la página
+        actualizarFechaHora();
+    </script>
+
+</body>
+</html>

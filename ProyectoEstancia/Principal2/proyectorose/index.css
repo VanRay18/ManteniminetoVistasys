@@ -1,0 +1,81 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+  }
+
+#contenedor-general {
+    background-color: #000;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 200px; /* Agrega una altura mínima para que sea visible */
+}
+  
+  #reloj {
+    background-color: #000;
+    font-size: 2em;
+    color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #hora {
+    margin: 0;
+  }
+  
+  #signos-vitales {
+    background: url('img/sv.jpg') center/cover; /* Ruta de tu imagen y ajustes */
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff; /* Ajusta el color del texto para que sea legible en la imagen de fondo */
+  }
+  
+  #datos-salud {
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #datos-salud p {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  
+  span {
+    font-weight: bold;
+    color: #3498db;
+  }
+
+button {
+    background-color: #ffffff;
+    border: 2px solid #333;
+    text-align: right;
+    width: 119px;
+}
+#ul {
+   
+   /* border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;*/
+}
