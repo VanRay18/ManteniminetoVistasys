@@ -9,10 +9,27 @@
     <title>Información de Salud</title>
 </head>
 <body>
-
+<style>
+    h2 {
+  font-size: 16px; /* Change font size to 24px */
+    }
+    h3 {
+  font-size: 18px; /* Change font size to 24px */
+    }
+    h4 {
+  font-size: 14px; /* Change font size to 24px */
+    }
+</style>
     <div id="contenedor-general">
 
         <h1>VITASYS</h1>
+        <h2>Los signos vitales son como una ventanita que nos permite echar un vistazo al funcionamiento interno de nuestro cuerpo.</h2>
+        <h3>Valores normales </h3>
+        <h4>Temperatura Corporal: <strong>Mayor a 36.0°C</strong><br />
+            Pulso: <strong>60 a 100</strong> latidos por minuto<br />
+            Respiracion: <strong>12 a 18</strong> respiraciones por minuto<br />
+            Presion Arterial: <strong>90/60 </strong>mmHg y <strong>120/80</strong> mmHg
+        </h4>
         <p id="fecha-hora"></p>
 
         <div id="signos-vitales">
