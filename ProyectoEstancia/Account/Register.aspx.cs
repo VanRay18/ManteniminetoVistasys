@@ -6,6 +6,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
 using ProyectoEstancia.Models;
+using System.Web.UI.WebControls;
+
 
 namespace ProyectoEstancia.Account
 {
@@ -16,21 +18,56 @@ namespace ProyectoEstancia.Account
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
             var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
             var user = new ApplicationUser() { UserName = Email.Text, Email = Email.Text };
+
+            // Guardar temporalmente los valores de contraseña y confirmación de contraseña
+            string passwordValue = Password.Text;
+            string confirmPasswordValue = ConfirmPassword.Text;
+
             IdentityResult result = manager.Create(user, Password.Text);
             if (result.Succeeded)
             {
-                // Para obtener más información sobre cómo habilitar la confirmación de cuentas y el restablecimiento de contraseña, visite https://go.microsoft.com/fwlink/?LinkID=320771
-                //string code = manager.GenerateEmailConfirmationToken(user.Id);
-                //string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, user.Id, Request);
-                //manager.SendEmail(user.Id, "Confirmar cuenta", "Para confirmar la cuenta, haga clic <a href=\"" + callbackUrl + "\">aquí</a>.");
-
-                signInManager.SignIn( user, isPersistent: false, rememberBrowser: false);
+                signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
                 IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
             }
-            else 
+            else
             {
-                ErrorMessage.Text = result.Errors.FirstOrDefault();
+                // Construir el mensaje de error dinámicamente
+                string errorMessage = "";
+
+                if (Password.Text.Length < 8)
+                {
+                    errorMessage += "Mínimo 8 caracteres. ";
+                }
+
+                if (!Password.Text.Any(char.IsUpper))
+                {
+                    errorMessage += "Falta una mayúscula. ";
+                }
+
+                if (!Password.Text.Any(char.IsDigit))
+                {
+                    errorMessage += "Falta un número. ";
+                }
+
+                if (!Password.Text.Any(c => !char.IsLetterOrDigit(c)))
+                {
+                    errorMessage += "Falta un símbolo especial. ";
+                }
+
+                ErrorMessage.Text = errorMessage;
+               
             }
+
+        }
+
+
+        protected void PasswordValidator_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            string password = args.Value;
+
+            // Verificar cada requisito y establecer el resultado de la validación
+            args.IsValid = password.Length >= 8 && password.Any(char.IsUpper) && password.Any(char.IsDigit) && password.Any(c => !char.IsLetterOrDigit(c));
         }
     }
 }
+

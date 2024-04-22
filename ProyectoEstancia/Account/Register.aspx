@@ -65,7 +65,7 @@
         </p>
         <h4>Crear una nueva cuenta</h4>
         <hr />
-        <asp:ValidationSummary runat="server" CssClass="text-danger" />
+        
         <div class="row">
             <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 col-form-label">Correo electrónico</asp:Label>
             <div class="col-md-10">
@@ -77,15 +77,20 @@
         <div class="row">
             <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 col-form-label">Contraseña</asp:Label>
             <div class="col-md-10">
-                <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" />
+                <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" EnableViewState="true" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="Password"
                     CssClass="text-danger" ErrorMessage="El campo de contraseña es obligatorio." />
+                <asp:CustomValidator runat="server" ControlToValidate="Password"
+                    CssClass="text-danger" ErrorMessage=""
+                    OnServerValidate="PasswordValidator_ServerValidate" />
             </div>
         </div>
+
+
         <div class="row">
             <asp:Label runat="server" AssociatedControlID="ConfirmPassword" CssClass="col-md-2 col-form-label">Confirmar contraseña</asp:Label>
             <div class="col-md-10">
-                <asp:TextBox runat="server" ID="ConfirmPassword" TextMode="Password" CssClass="form-control" />
+                <asp:TextBox runat="server" ID="ConfirmPassword" TextMode="Password" CssClass="form-control" EnableViewState="true" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="ConfirmPassword"
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="El campo de confirmación de contraseña es obligatorio." />
                 <asp:CompareValidator runat="server" ControlToCompare="Password" ControlToValidate="ConfirmPassword"
@@ -99,3 +104,4 @@
         </div>
     </main>
 </asp:Content>
+
