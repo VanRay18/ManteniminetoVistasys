@@ -97,7 +97,7 @@
                     </div>
                     <div class="row">
                         <div class="col-offset-md-2 col-md-10">
-                            <asp:Button runat="server" OnClick="LogIn" Text="Iniciar sesión"  />
+                            <asp:Button runat="server" ID="btnLogin" OnClick="LogIn" Text="Iniciar sesión" />
                         </div>
                     </div>
                 </div>

@@ -21,6 +21,11 @@ namespace ProyectoEstancia.Account
             {
                 RegisterHyperLink.NavigateUrl += "?ReturnUrl=" + returnUrl;
             }
+
+            // Asigna estilos al botón directamente desde el code-behind
+            btnLogin.Style.Add("margin-left", "90px");
+
+            RegisterHyperLink.Style.Add("left", "90px");
         }
 
         protected void LogIn(object sender, EventArgs e)
@@ -44,7 +49,7 @@ namespace ProyectoEstancia.Account
                         Response.Redirect("/Account/Lockout");
                         break;
                     case SignInStatus.RequiresVerification:
-                        Response.Redirect(String.Format("/Account/TwoFactorAuthenticationSignIn?ReturnUrl={0}&RememberMe={1}", 
+                        Response.Redirect(String.Format("/Account/TwoFactorAuthenticationSignIn?ReturnUrl={0}&RememberMe={1}",
                                                         Request.QueryString["ReturnUrl"],
                                                         RememberMe.Checked),
                                           true);
