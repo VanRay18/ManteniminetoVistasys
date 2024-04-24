@@ -8,11 +8,16 @@ using Owin;
 using ProyectoEstancia.Models;
 using System.Web.UI.WebControls;
 
-
 namespace ProyectoEstancia.Account
 {
     public partial class Register : Page
     {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            // Agregar estilo al botón btnLogin
+            btnRegister.Style.Add("margin-left", "170px");
+        }
+
         protected void CreateUser_Click(object sender, EventArgs e)
         {
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
@@ -55,11 +60,8 @@ namespace ProyectoEstancia.Account
                 }
 
                 ErrorMessage.Text = errorMessage;
-               
             }
-
         }
-
 
         protected void PasswordValidator_ServerValidate(object source, ServerValidateEventArgs args)
         {
@@ -70,4 +72,5 @@ namespace ProyectoEstancia.Account
         }
     }
 }
+
 
