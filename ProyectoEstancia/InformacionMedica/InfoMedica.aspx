@@ -79,31 +79,29 @@ h2 {
         <h2>Información Médica</h2>
         
         <div class="medical-info" id="patient-info">
-            <p>NSS:</p> <asp:TextBox ID="txtNSS" runat="server" PlaceHolder=" NSS"></asp:TextBox>
-            <p>Nombre completo:</p><asp:TextBox ID="txtNombre" runat="server" PlaceHolder=" Nombre" Width="627px"></asp:TextBox>
-             <p>Edad:</p><asp:TextBox ID="txtEdad" runat="server" PlaceHolder=" Edad"></asp:TextBox>
-            <p>Tipo de Sangre:</p>  <asp:TextBox ID="txtTipoSangre" runat="server" PlaceHolder=" Tipo de Sangre"></asp:TextBox>
-            <p>Descripcion de enfermedad cronica:</p> <asp:TextBox ID="txtEnfermedad" runat="server" PlaceHolder="Descripcion de  Enfermedad" Height="150px" Width="633px"></asp:TextBox>
-            <p>Medicamentos:</p> <asp:TextBox ID="txtMedicamentos" runat="server" PlaceHolder=" Medicamentos" Height="147px" Width="631px"></asp:TextBox>
+            <p>NSS:</p> <asp:TextBox ID="txtNSS" runat="server" placeholder="NSS"></asp:TextBox>
+            <p>Nombre completo:</p><asp:TextBox ID="txtNombre" runat="server" placeholder="Nombre" Width="627px"></asp:TextBox>
+            <p>Edad:</p><asp:TextBox ID="txtEdad" runat="server" placeholder="Edad"></asp:TextBox>
+            <p>Tipo de Sangre:</p>  <asp:TextBox ID="txtTipoSangre" runat="server" placeholder="Tipo de Sangre"></asp:TextBox>
+            <p>Descripcion de enfermedad cronica:</p> <asp:TextBox ID="txtEnfermedad" runat="server" placeholder="Descripcion de Enfermedad" Height="150px" Width="633px"></asp:TextBox>
+            <p>Medicamentos:</p> <asp:TextBox ID="txtMedicamentos" runat="server" placeholder="Medicamentos" Height="147px" Width="631px"></asp:TextBox>
         </div>
 
         <div class="row">
-
             <div class="col-md-4">
-                <asp:Button ID="btnInsertar" runat="server" Text="Guardar" OnClick="btnInsertar_Click1"   />
+                <asp:Button ID="btnInsertar" runat="server" Text="Guardar" OnClick="btnInsertar_Click1" />
             </div>
             <div class="col-md-4">
-                <asp:Button ID="btnModificar" runat="server" Text="Modificar" OnClick="btnModificar_Click"  />
+                <asp:Button ID="btnModificar" runat="server" Text="Modificar" OnClick="btnModificar_Click" />
             </div>
             <div class="col-md-4">
-                <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" OnClick="btnEliminar_Click"   />
+                <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" OnClick="btnEliminar_Click" />
             </div>
-            
         </div>
         <br>
         <br>
 
-        <div class: "GridV">
+        <div class="GridV">
             <asp:GridView ID="GridViewInfoMedica" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSourceInfoMedica" OnSelectedIndexChanged="GridViewInfoMedica_SelectedIndexChanged" Height="84px" Width="711px">
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" ButtonType="button"></asp:CommandField>
@@ -121,6 +119,7 @@ h2 {
 
     </div> 
 </body>
+
 
 
 
