@@ -1,9 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\maria\\Documents\\GitHub\\ManteniminetoVistasys\\",
+  "WorkspaceRootPath": "C:\\Users\\Jonat\\OneDrive\\Documentos\\GitHub\\ManteniminetoVistasys\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5C4196FE-743A-48CB-900E-D8A0A3CC5F19}|ProyectoEstancia\\ProyectoEstancia.csproj|c:\\users\\maria\\documents\\github\\manteniminetovistasys\\proyectoestancia\\account\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{5C4196FE-743A-48CB-900E-D8A0A3CC5F19}|ProyectoEstancia\\ProyectoEstancia.csproj|c:\\users\\jonat\\onedrive\\documentos\\github\\manteniminetovistasys\\proyectoestancia\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{5C4196FE-743A-48CB-900E-D8A0A3CC5F19}|ProyectoEstancia\\ProyectoEstancia.csproj|solutionrelative:proyectoestancia\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C4196FE-743A-48CB-900E-D8A0A3CC5F19}|ProyectoEstancia\\ProyectoEstancia.csproj|c:\\users\\jonat\\onedrive\\documentos\\github\\manteniminetovistasys\\proyectoestancia\\account\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{5C4196FE-743A-48CB-900E-D8A0A3CC5F19}|ProyectoEstancia\\ProyectoEstancia.csproj|solutionrelative:proyectoestancia\\account\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
@@ -14,15 +18,32 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\Jonat\\OneDrive\\Documentos\\GitHub\\ManteniminetoVistasys\\ProyectoEstancia\\Web.config",
+              "RelativeDocumentMoniker": "ProyectoEstancia\\Web.config",
+              "ToolTip": "C:\\Users\\Jonat\\OneDrive\\Documentos\\GitHub\\ManteniminetoVistasys\\ProyectoEstancia\\Web.config",
+              "RelativeToolTip": "ProyectoEstancia\\Web.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-04-25T18:26:40.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Login.aspx",
-              "DocumentMoniker": "C:\\Users\\maria\\Documents\\GitHub\\ManteniminetoVistasys\\ProyectoEstancia\\Account\\Login.aspx",
+              "DocumentMoniker": "C:\\Users\\Jonat\\OneDrive\\Documentos\\GitHub\\ManteniminetoVistasys\\ProyectoEstancia\\Account\\Login.aspx",
               "RelativeDocumentMoniker": "ProyectoEstancia\\Account\\Login.aspx",
-              "ToolTip": "C:\\Users\\maria\\Documents\\GitHub\\ManteniminetoVistasys\\ProyectoEstancia\\Account\\Login.aspx",
+              "ToolTip": "C:\\Users\\Jonat\\OneDrive\\Documentos\\GitHub\\ManteniminetoVistasys\\ProyectoEstancia\\Account\\Login.aspx",
               "RelativeToolTip": "ProyectoEstancia\\Account\\Login.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",

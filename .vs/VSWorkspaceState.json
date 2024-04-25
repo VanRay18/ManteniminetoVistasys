@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ProyectoEstancia",
+    "\\ProyectoEstancia\\Account"
   ],
-  "SelectedNode": "\\SolucionEstancia.sln",
+  "SelectedNode": "\\ProyectoEstancia\\Account\\Login.aspx",
   "PreviewInSolutionExplorer": false
 }
