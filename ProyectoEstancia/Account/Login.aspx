@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>PaginaVitaSys</title>
         <style>
-            /* Estilos de la página */
+            /* Estilos de la págia */
             body {
                 font-family: 'Roboto', sans-serif; /* Cambios de la fuente */
                 background-color: #f2f2f2;
@@ -25,7 +25,7 @@
 
             .container {
                 max-width: 800px;
-                margin: 50px auto; /* Centrar vertical y horizontalmente */
+                margin: 50px auto; /* Centrar verticalmente y horizontalmente */
                 padding: 20px;
                 background-color: #3498db; /* Color de fondo del contenedor */
                 border-radius: 5px; /* Bordes redondeados */
@@ -34,7 +34,7 @@
             }
 
             .row {
-                margin-bottom: 2px; /* Espacio entre filas */
+                margin-bottom: 10px; /* Espacio entre filas */
             }
 
             .col-form-label {
@@ -47,7 +47,7 @@
                 border: none; /* Borde del campo de entrada */
                 border-radius: 3px; /* Bordes redondeados */
                 background-color: #ffffff; /* Color de fondo del campo de entrada */
-                margin-bottom: 2px; /* Espacio inferior */
+                margin-bottom: 10px; /* Espacio inferior */
                 box-sizing: border-box;
             }
 
@@ -63,8 +63,6 @@
                 margin-right: 5px; /* Espacio entre el checkbox y el texto */
                 vertical-align: middle; /* Alineación vertical */
             }
-
-
 
             .btnLogin {
                 background-color: #0b1b4a; /* Color de fondo del botón */
@@ -88,7 +86,7 @@
                 text-align: center; /* Alinear al centro */
             }
 
-            /* Estilos para el pie de página hola */
+            /* Estilos para el pie de página */
             .footer {
                 text-align: center; /* Alinear al centro */
                 margin-top: 5px; /* Espacio superior */
@@ -104,66 +102,56 @@
                 text-decoration: underline; /* Subrayado al pasar el ratón */
             }
 
-      
-
         </style>
     </head>
     <main aria-labelledby="title">
-        <h2 id="title"><%: Title %>.</h2>
-        <div class="col-md-8" >
-            <section id="loginForm" class="container">
-                <div class="row">
-                    <%--<h4>Utilice una cuenta local para iniciar sesión.</h4>--%>
-                    <hr />
-                    <asp:PlaceHolder runat="server" ID="ErrorMessage" Visible="false">
-                        <p class="text-danger">
-                            <asp:Literal runat="server" ID="FailureText" />
+        <h2 id="title" class="text-center"><%: Title %></h2> <!-- Centro el título -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <section id="loginForm">
+                        <div class="row">
+                            <hr />
+                            <asp:PlaceHolder runat="server" ID="ErrorMessage" Visible="false">
+                                <p class="text-danger">
+                                    <asp:Literal runat="server" ID="FailureText" />
+                                </p>
+                            </asp:PlaceHolder>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <asp:TextBox runat="server" ID="Email" CssClass="form-control" TextMode="Email" placeholder="Correo electrónico" />
+                                    <asp:RequiredFieldValidator runat="server" ControlToValidate="Email" CssClass="text-danger" ErrorMessage="El campo de correo electrónico es obligatorio." />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" placeholder="Contraseña" />
+                                    <asp:RequiredFieldValidator runat="server" ControlToValidate="Password" CssClass="text-danger" ErrorMessage="El campo de contraseña es obligatorio." />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="offset-md-2 col-md-10 checkbox">
+                                    <asp:CheckBox runat="server" ID="RememberMe" CssClass="checkbox" />
+                                    <asp:Label runat="server" AssociatedControlID="RememberMe">¿Recordar cuenta?</asp:Label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="offset-md-2 col-md-10">
+                                    <asp:Button runat="server" ID="btnLogin" OnClick="LogIn" Text="Iniciar sesión" CssClass="btnLogin" />
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled">Registrarse</asp:HyperLink>
                         </p>
-                    </asp:PlaceHolder>
-                    <div class="row">
-        <div class="row">
-            <div class="col-md-12">
-                <asp:TextBox runat="server" ID="Email" CssClass="form-control" TextMode="Email" placeholder="Correo electrónico" />
-                <asp:RequiredFieldValidator runat="server" ControlToValidate="Email"
-                    CssClass="text-danger" ErrorMessage="El campo de correo electrónico es obligatorio." />
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" placeholder="Contraseña" />
-                <asp:RequiredFieldValidator runat="server" ControlToValidate="Password"
-                    CssClass="text-danger" ErrorMessage="El campo de contraseña es obligatorio." />
-            </div>
-        </div>
-
-                    <div class="row">
-                        <div class="offset-md-2 col-md-10 checkbox">
-                            <asp:CheckBox runat="server" ID="RememberMe" CssClass="checkbox" />
-                            <asp:Label runat="server" AssociatedControlID="RememberMe">¿Recordar cuenta?</asp:Label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-offset-md-2 col-md-10">
-                            <asp:Button runat="server" ID="btnLogin" OnClick="LogIn" Text="Iniciar sesión" CssClass="btnLogin" />
-                        </div>
-                    </div>
+                    </section>
                 </div>
-                <p>
-                    <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled">Registrarse como usuario nuevo</asp:HyperLink>
-                </p>
-                <p>
-                    <%-- Enable this once you have account confirmation enabled for password reset functionality
-                    <asp:HyperLink runat="server" ID="ForgotPasswordHyperLink" ViewStateMode="Disabled">Forgot your password?</asp:HyperLink>
-                    --%>
-                </p>
-            </section>
-        </div>
-
-        <div class="col-md-4">
-            <section id="socialLoginForm" class="container socialLoginForm">
-                <uc:OpenAuthProviders runat="server" ID="OpenAuthLogin" />
-            </section>
+                <div class="col-md-4">
+                    <section id="socialLoginForm" class="socialLoginForm">
+                        <uc:OpenAuthProviders runat="server" ID="OpenAuthLogin" />
+                    </section>
+                </div>
+            </div>
         </div>
     </main>
 </asp:Content>
-
