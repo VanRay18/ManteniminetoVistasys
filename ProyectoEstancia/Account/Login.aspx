@@ -10,7 +10,7 @@
         <style>
             /* Estilos de la página */
             body {
-                font-family: 'Roboto', sans-serif; /* Cambio de la fuente */
+                font-family: 'Roboto', sans-serif; /* Cambios de la fuente */
                 background-color: #f2f2f2;
                 margin: 0;
                 padding: 0;
@@ -88,7 +88,7 @@
                 text-align: center; /* Alinear al centro */
             }
 
-            /* Estilos para el pie de página */
+            /* Estilos para el pie de página hola */
             .footer {
                 text-align: center; /* Alinear al centro */
                 margin-top: 5px; /* Espacio superior */

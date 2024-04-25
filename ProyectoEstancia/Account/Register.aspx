@@ -7,7 +7,7 @@
         <title>PaginaVitaSys</title>
         <style>
             body {
-                font-family: Arial, sans-serif;
+                font-family: 'Roboto', sans-serif; /* Cambio de la fuente */
                 background-color: #f2f2f2;
                 margin: 0;
                 padding: 0;
@@ -85,20 +85,22 @@
         
         <div class="container">
             <div class="row">
-                <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 col-form-label">Correo electrónico</asp:Label>
-                <div class="col-md-10">
-                    <asp:TextBox runat="server" ID="Email" CssClass="form-control" TextMode="Email" />
+                <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-form-label text-left"></asp:Label>
+                    <div class="col-md-10">
+                    <asp:TextBox runat="server" ID="Email" CssClass="form-control" TextMode="Email" placeholder="Correo electrónico" />
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="Email"
                         CssClass="text-danger" ErrorMessage="El campo de correo electrónico es obligatorio." />
-                </div>
+                    </div>
             </div>
         </div>
+
+
         
         <div class="container">
             <div class="row">
-                <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 col-form-label">Contraseña</asp:Label>
+                <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-form-label text-left"></asp:Label>
                 <div class="col-md-10">
-                    <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" EnableViewState="true" />
+                    <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" placeholder="Contraseña" EnableViewState="true" />
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="Password"
                         CssClass="text-danger" ErrorMessage="El campo de contraseña es obligatorio." />
                     <asp:CustomValidator runat="server" ControlToValidate="Password"
@@ -108,11 +110,12 @@
             </div>
         </div>
 
+
         <div class="container">
             <div class="row">
-                <asp:Label runat="server" AssociatedControlID="ConfirmPassword" CssClass="col-md-2 col-form-label">Confirmar contraseña</asp:Label>
+                <asp:Label runat="server" AssociatedControlID="ConfirmPassword" CssClass="col-form-label text-left"></asp:Label>
                 <div class="col-md-10">
-                    <asp:TextBox runat="server" ID="ConfirmPassword" TextMode="Password" CssClass="form-control" EnableViewState="true" />
+                    <asp:TextBox runat="server" ID="ConfirmPassword" TextMode="Password" CssClass="form-control" placeholder="contraseña" EnableViewState="true" />
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="ConfirmPassword"
                         CssClass="text-danger" Display="Dynamic" ErrorMessage="El campo de confirmación de contraseña es obligatorio." />
                     <asp:CompareValidator runat="server" ControlToCompare="Password" ControlToValidate="ConfirmPassword"
