@@ -10,7 +10,7 @@
         <style>
             /* Estilos de la página */
             body {
-                font-family: Arial, sans-serif;
+                font-family: 'Roboto', sans-serif; /* Cambio de la fuente */
                 background-color: #f2f2f2;
                 margin: 0;
                 padding: 0;
@@ -110,7 +110,7 @@
     </head>
     <main aria-labelledby="title">
         <h2 id="title"><%: Title %>.</h2>
-        <div class="col-md-8">
+        <div class="col-md-8" >
             <section id="loginForm" class="container">
                 <div class="row">
                     <%--<h4>Utilice una cuenta local para iniciar sesión.</h4>--%>
