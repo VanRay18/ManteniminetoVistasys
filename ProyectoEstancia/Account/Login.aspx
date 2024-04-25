@@ -4,66 +4,114 @@
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PaginaVitaSys</title>
-    <style>
-       body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-        }
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PaginaVitaSys</title>
+        <style>
+            /* Estilos de la página */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f2f2f2;
+                margin: 0;
+                padding: 0;
+            }
 
-        header {
-            background-color: #3498db;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 20px;
-        }
+            header {
+                background-color: #3498db;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 20px;
+            }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-              background-color: #3498db;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            color: darkblue
-        }
-        .row {
-            max-width: 800px;
-            max-height: 800px;
-            border-radius: 50%;
-            margin-right: 20px;
-            color:azure;
+            .container {
+                max-width: 800px;
+                margin: 50px auto; /* Centrar vertical y horizontalmente */
+                padding: 20px;
+                background-color: #3498db; /* Color de fondo del contenedor */
+                border-radius: 5px; /* Bordes redondeados */
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
+                color: darkblue; /* Color del texto */
+            }
 
-        }
-        #loginForm{
+            .row {
+                margin-bottom: 2px; /* Espacio entre filas */
+            }
 
-        color: ghostwhite;
-         max-width: 800px;
+            .col-form-label {
+                color: #ffffff; /* Color de las etiquetas */
+            }
 
-        }
+            .form-control {
+                width: 100%;
+                padding: 10px;
+                border: none; /* Borde del campo de entrada */
+                border-radius: 3px; /* Bordes redondeados */
+                background-color: #ffffff; /* Color de fondo del campo de entrada */
+                margin-bottom: 2px; /* Espacio inferior */
+                box-sizing: border-box;
+            }
 
-        #main{
-           
-            background-color: #0b1b4a;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            color: ghostwhite;
-        }
+            /* Estilos para el checkbox */
+            .checkbox label {
+                color: ghostwhite; /* Color del texto de la casilla de verificación */
+                font-size: 14px; /* Tamaño de fuente */
+            }
 
-        .h2{
-             color:floralwhite;
-        }
-    
-    </style>
-</head>
+            .checkbox input[type="checkbox"] {
+                width: 16px; /* Ancho del checkbox */
+                height: 16px; /* Altura del checkbox */
+                margin-right: 5px; /* Espacio entre el checkbox y el texto */
+                vertical-align: middle; /* Alineación vertical */
+            }
+
+
+
+            .btnLogin {
+                background-color: #0b1b4a; /* Color de fondo del botón */
+                color: ghostwhite; /* Color del texto del botón */
+                padding: 5px; /* Espaciado interno */
+                border: none; /* Eliminamos el borde */
+                border-radius: 5px; /* Bordes redondeados */
+                cursor: pointer; /* Cursor al pasar */
+                text-align: center; /* Centrar texto */
+                text-decoration: none; /* Eliminar subrayado */
+                display: inline-block; /* Mostrar como bloque en línea */
+                font-size: 16px; /* Tamaño de fuente */
+                transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+            }
+
+            .btnLogin:hover {
+                background-color: #08518c; /* Cambio de color al pasar el mouse */
+            }
+
+            .socialLoginForm {
+                text-align: center; /* Alinear al centro */
+            }
+
+            /* Estilos para el pie de página */
+            .footer {
+                text-align: center; /* Alinear al centro */
+                margin-top: 5px; /* Espacio superior */
+                color: #666666; /* Color del texto del pie de página */
+            }
+
+            .footer a {
+                color: #3498db; /* Color del enlace en el pie de página */
+                text-decoration: none; /* Eliminar subrayado */
+            }
+
+            .footer a:hover {
+                text-decoration: underline; /* Subrayado al pasar el ratón */
+            }
+
+      
+
+        </style>
+    </head>
     <main aria-labelledby="title">
         <h2 id="title"><%: Title %>.</h2>
         <div class="col-md-8">
-            <section id="loginForm">
+            <section id="loginForm" class="container">
                 <div class="row">
                     <%--<h4>Utilice una cuenta local para iniciar sesión.</h4>--%>
                     <hr />
@@ -89,16 +137,14 @@
         </div>
 
                     <div class="row">
-                        <div class="offset-md-2 col-md-10">
-                            <div class="checkbox">
-                                <asp:CheckBox runat="server" ID="RememberMe" />
-                                <asp:Label runat="server" AssociatedControlID="RememberMe">¿Recordar cuenta?</asp:Label>
-                            </div>
+                        <div class="offset-md-2 col-md-10 checkbox">
+                            <asp:CheckBox runat="server" ID="RememberMe" CssClass="checkbox" />
+                            <asp:Label runat="server" AssociatedControlID="RememberMe">¿Recordar cuenta?</asp:Label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-offset-md-2 col-md-10">
-                            <asp:Button runat="server" ID="btnLogin" OnClick="LogIn" Text="Iniciar sesión" />
+                            <asp:Button runat="server" ID="btnLogin" OnClick="LogIn" Text="Iniciar sesión" CssClass="btnLogin" />
                         </div>
                     </div>
                 </div>
@@ -114,9 +160,10 @@
         </div>
 
         <div class="col-md-4">
-            <section id="socialLoginForm">
+            <section id="socialLoginForm" class="container socialLoginForm">
                 <uc:OpenAuthProviders runat="server" ID="OpenAuthLogin" />
             </section>
         </div>
     </main>
 </asp:Content>
+

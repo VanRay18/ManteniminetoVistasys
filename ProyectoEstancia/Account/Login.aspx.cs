@@ -25,7 +25,7 @@ namespace ProyectoEstancia.Account
             // Asigna estilos al botón directamente desde el code-behind
             btnLogin.Style.Add("margin-left", "90px");
 
-            RegisterHyperLink.Style.Add("left", "90px");
+            RegisterHyperLink.Style.Add("margin-left", "35px");
         }
 
         protected void LogIn(object sender, EventArgs e)
