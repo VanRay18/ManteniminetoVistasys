@@ -7,63 +7,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Aplicación - Información Médica</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-        }
+       body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
 
-        header {
-            background-color: #3498db;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 20px;
-        }
+header {
+    background-color: #3498db;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+}
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #0b1b4a;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            color:aliceblue;
-        }
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #0b1b4a;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #f2f2f2;
+}
 
-        h2 {
-            color: #3498db;
-        }
+h2 {
+    color: #3498db;
+}
 
-        .medical-info {
-            margin-bottom: 20px;
-            color: #f2f2f2;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            
-        }
+.medical-info {
+    margin-bottom: 20px;
+    color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
-        .edit-info {
-            background-color: #3498db;
-            color: #f2f2f2;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 3px;
-            cursor: pointer;
-        }
+.edit-info {
+    background-color: #3498db;
+    color: #f2f2f2;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-        .edit-info:hover {
-            background-color: #f2f2f2;
-        }
+.edit-info:hover {
+    background-color: #2980b9;
+}
 
-        span {
-            font-weight: bold;
-        }
+/* Evitar estilos directos en elementos genéricos como span */
+.bold-text {
+    font-weight: bold;
+}
 
-         .GridV{
-            color:ghostwhite;
-         }
+/* Estilo para la clase GridV */
+.GridV {
+    color: #f8f8ff; /* ghostwhite */
+}
+
     </style>
 </head>
 
