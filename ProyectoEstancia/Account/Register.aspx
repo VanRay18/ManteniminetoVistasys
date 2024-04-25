@@ -76,11 +76,10 @@
         </style>
     </head>
     <main aria-labelledby="title">
-        <h2 id="title"><%: Title %>.</h2>
+        <h2 class="text-center" id="title"><%: Title %></h2>
         <p class="text-danger">
             <asp:Literal runat="server" ID="ErrorMessage" />
         </p>
-        <h4>Crear una nueva cuenta</h4>
         <hr />
         
         <div class="container">
@@ -115,7 +114,7 @@
             <div class="row">
                 <asp:Label runat="server" AssociatedControlID="ConfirmPassword" CssClass="col-form-label text-left"></asp:Label>
                 <div class="col-md-10">
-                    <asp:TextBox runat="server" ID="ConfirmPassword" TextMode="Password" CssClass="form-control" placeholder="contraseña" EnableViewState="true" />
+                    <asp:TextBox runat="server" ID="ConfirmPassword" TextMode="Password" CssClass="form-control" placeholder="Confirmar contraseña" EnableViewState="true" />
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="ConfirmPassword"
                         CssClass="text-danger" Display="Dynamic" ErrorMessage="El campo de confirmación de contraseña es obligatorio." />
                     <asp:CompareValidator runat="server" ControlToCompare="Password" ControlToValidate="ConfirmPassword"
