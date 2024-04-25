@@ -7,61 +7,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Aplicación - Contactos</title>
     <style>
-       body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-        }
+      body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
 
-        header {
-            background-color: #3498db;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 20px;
-        }
+header {
+    background-color: #3498db;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+}
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #0b1b4a;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #0b1b4a;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
-        h2 {
-            color: #3498db;
-        }
+h2 {
+    color: #3498db;
+}
 
-        .contact {
-            margin-bottom: 20px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            overflow: hidden;
-            color: aliceblue;
-        }
+/* Estilo para la sección de contacto */
+.contact {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    color: #f2f2f2; /* aliceblue */
+}
 
-        .contact img {
-            max-width: 100px;
-            max-height: 100px;
-            border-radius: 50%;
-            margin-right: 20px;
-            float: left;
-        }
+.contact img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    float: left;
+}
 
-        .contact-info {
-            float: left;
-        }
+.contact-info {
+    float: left;
+}
 
-        .contact-info h3 {
-            margin: 0;
-        }
+.contact-info h3 {
+    margin: 0;
+}
 
-        .Grid{
-            color: aliceblue;
-        }
+/* Estilo para la clase Grid */
+.Grid {
+    color: #f2f2f2; /* aliceblue */
+}
+
     </style>
 </head>
 
